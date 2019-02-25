@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="node_modules\bootstrap\dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>SpaceX Control Panel</title>
+    <script type="text/javascript">
+        function digitalWatch() {
+          var date = new Date();
+          var hours = date.getHours();
+          var minutes = date.getMinutes();
+          var seconds = date.getSeconds();
+          if (hours < 10) hours = "0" + hours;
+          if (minutes < 10) minutes = "0" + minutes;
+          if (seconds < 10) seconds = "0" + seconds;
+          document.getElementById("digital_watch").innerHTML = hours + ":" + minutes + ":" + seconds;
+          setTimeout("digitalWatch()", 1000);
+        }
+      </script>
+</head>
+
+<body onload="digitalWatch()">
+
+    
+<div class="container">
+
+	<div class="Cntainer_main_5blocks">
+	        <div class="Main_block">
+                <div class="Main_block_text">
+                    <small class="Main_block_text_up">Crew</small>
+                    <div class="Main_block_text_down">Dragon</div>
+                </div>
+            </div>
+            <div class="Main_block">
+                <div class="Main_block_text">
+                    <small class="Main_block_text_up">Perigee</small>
+                    <div class="Main_block_text_down">185.012<span>m</span></div>
+                </div>
+                <div class="Main_block_text_symbol">
+                    <span class="Symbol_rectangle"></span>
+                </div>
+            </div>
+            <div id="perigee_block" class="Main_block">
+                <div class="Main_block_text">
+                    <small class="Main_block_text_up">Apogee</small>
+                    <div class="Main_block_text_down">360.304<span>m</span></div>
+                </div>
+                <div class="Main_block_text_symbol">
+                    <span class="Symbol_rectangle"></span>
+                </div>
+            </div>
+            <div id="relative_altitude_block" class="Main_block">
+                <div class="Main_block_text">
+                    <small class="Main_block_text_up">Relative Altitude</small>
+                    <div class="Main_block_text_down">50,948<span>m</span></div>
+                </div>
+                <div class="Main_block_text_symbol">
+                    <span class="Symbol_arrow_down"></span>
+                </div>
+            </div>
+            <div id="range_to_iss_block" class="Main_block">
+                <div class="Main_block_text">
+                    <small class="Main_block_text_up">Range to ISS</small>
+                    <div class="Main_block_text_down">625,713<span>m</span></div>
+                </div>
+                <div class="Main_block_text_symbol">
+                    <span class="Symbol_arrow_down"></span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+        	<img class="picture_SpaceX" src="Earth.jpg" alt="image of SpaceX control panel">
+        </div>
+
+
+<div class="main_4blocks">
+            <div class="main_4blocks_day">
+                <small class="main_4blocks_day_text_up">Day 131</small>
+                <div class="main_4blocks_day_time">
+                        <p id="digital_watch" style="color: #F0FEFE; font-size: 100%; font-weight: bold;"></p>
+                </div>
+            </div>
+            <div class="main_4blocks_dependence">
+                <div class="main_4blocks_dependence_speed">
+                    Speed X,Y,Z m/s
+                </div>
+                <div class="main_4blocks_next">
+                    <div class="next_burn">
+                        <div class="next_burn_up">
+                            <div class="next_burn_up_text">Next Burn</div>
+                            <div class="next_burn_up_condition">Enabled
+                                    <span class="Symbol_circle"></span>
+                            </div>
+                        </div>
+                        <div class="next_burn_middle">
+                            -0:05:48
+                        </div>
+                        <div class="next_burn_timeday">
+                            <div class="next_burn_time">13:52:00</div>
+                            <div class="next_burn_day">Day 131</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="main_4blocks_target">
+                    <div class="target_V">
+                        <div class="target_V_up">Target V</div>
+                        <div class="target_V_middle">33.5 m/s</div>
+                        <div class="target_V_down">Thruster Temps</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<div class="Alarms_block">
+            <div class="block_alarms">
+                <span>0</span> Alarms
+            </div>
+            <div class="block_all_systems">
+                <span>All systems nominal</span>
+                <span> V </span>                    <!-- Changed to symbol "OK"-->
+            </div>
+        </div>
+	
+
+<div class="main_next_los">
+            <div class="main_los_begin">
+                <div class="los_next">
+                    <div class="los_next_begin">
+                        <span>-0:08:24</span>
+                    </div>
+                    <div class="los_next_up">
+                        <span>Next Los</span>
+                        <span>(00:03:17)</span>
+                    </div>
+                    <div class="los_next_time">
+                        <span>13:54:36</span>
+                        <span class="los_next_day">Day 131</span>
+                    </div>
+                </div>
+                <div class="los_estimated">
+                    <div class="los_estimated_begin">
+                        -02:51:02
+                    </div>
+                    <div class="los_estimated_up">
+                        <span>Estimated ISS Arrival</span>
+                    </div>
+                    <div class="los_estimated_time">
+                        <span>16:37:15</span>
+                        <span class="los_estimated_day">Day 131</span>
+                    </div>
+                </div>
+            </div>
+            <div class="main_los_end">
+                <div class="los_deorbit">
+                    <div class="los_deorbit_begin">-0:23:23</div>
+                    <div class="los_deorbit_up">
+                        <span>Next Deorbit Window</span>
+                        <span>Pacific</span>
+                    </div>
+                    <div class="los_deorbit_time">
+                        <span>14:09:36</span>
+                        <span class="los_deorbit_day">Day 131</span>
+                    </div>
+                </div>
+                <div class="line_between">
+                    <div class="line_between_begin">
+                        <div class="line_between_up">
+                            <span> Current breakdown </span>
+                        </div>
+                        <div class="line_between_down">
+                            Retrograde
+                        </div>
+                    </div>
+                    <div class="line_between_end">
+                        <span> V = 5.0 m/s </span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+			<div class="schedule">
+            <div class="schedule_header">
+                <div class="schedule_header_begin" >
+                    <span> Schedule </span>
+                </div>
+                <div class="schedule_header_end">
+                    <span> All events </span>
+                    <span> V </span> 
+                </div>
+            </div>
+            <div class="schedule_time_options">
+                <div class="schedule_time">
+                	<span>13.10.00</span>
+                	<span>13.37.00</span>
+                	<span>13.46.45</span>
+                    <span>13.52.10</span>
+                </div>
+
+                <div class="schedule_slider">
+                    <span class="slider_symbol"></span>
+                </div>
+
+                <div class="schedule_options">
+                        <div class="schedule_meanings">
+                            <div class="schedule_meanings_begin">
+                                <span> Burn GO/ON-GO </span>
+                            </div>
+                            <div class="schedule_meanings_end">
+                                <span> Ground </span> 
+                            </div>
+                            <!-- <hr color=""> -->
+                        </div>
+                        <div class="schedule_meanings">
+                                <div class="schedule_meanings_begin">
+                                    <span> Prepare for rendevous burn </span>
+                                </div>
+                                <div class="schedule_meanings_end">
+                                    <span> Crew </span>
+                                 </div>
+                        </div>
+                        <div class="schedule_meanings">
+                            <div class="schedule_meanings_begin">
+                                <span> Rendezvouz Burn Slow </span>
+                            </div>
+                            <div class="schedule_meanings_end">
+                                <span> Dragon </span>
+                            </div>
+                        </div>
+                        <div class="schedule_meanings">
+                            <div class="schedule_meanings_begin">
+                                <span> Rendezvouz Burn </span>
+                            </div>
+                            <div class="schedule_meanings_end">
+                                <span> Dragon </span>
+                            </div>
+                        </div>
+                </div>  
+            </div>
+        </div>
+
+
+<!-- Table events -->
+
+        <div class="table_events">
+            <div class="events_title">
+                <div class="events_title_name">
+                    <div>Rendezvous</div>
+                </div>
+                <div class="events_title_name">
+                    <div>Approach</div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <div class="events_graph">
+            <div class="events_graph_line"></div>
+                <div class="main">
+                    <div class="main_row">
+                        <div class="row_content">
+                            <div class="row_item"><p>ground<p></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                        </div>
+                        <div class="row_content 2">
+                            <div class="row_item"><p>Crew<p></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>        
+                        </div>
+                        <div class="row_content 3">
+                            <div class="row_item"><p>TDRS<p></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                        </div>
+                        <div class="row_content 4">
+                            <div class="row_item"><p>ISS<p></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                        </div>
+                        <div class="row_content 5">
+                            <div class="row_item"><p>Eclipse<p></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                        </div>
+                        <div class="row_content 6">
+                            <div class="row_item"><p>Burn<p></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                            <div class="row_item"></div>
+                        </div>
+                        <div class="row_content seventh">
+                            <p>12.30</p>
+                            <p>13.00</p>
+                            <p>13.30</p>
+                            <p>14.00</p>
+                            <p>14.30</p>
+                            <p>15.00</p>
+                            <p>15.30</p>
+                            <p>16.00</p>
+                            <p>16.30</p>
+                        </div>
+                    </div>
+                </div>
+
+				<div class="events_timeLine">
+                    <div class="footer_line"></div>
+                </div>
+
+        </div>
+
+
+
+</div>
+
+
+<script src="node_modules\jquery\dist\jquery.min.js"></script>
+<script src="node_modules\bootstrap\dist\js\bootstrap.min.js"></script>
+</body>
+</html>
